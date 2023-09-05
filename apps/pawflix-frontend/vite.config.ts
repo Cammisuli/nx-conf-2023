@@ -17,7 +17,7 @@ export default defineConfig({
   },
 
   plugins: [react(), nxViteTsPaths()],
-
+  assetsInclude: ['**/*.{jpg,webp}'],
   // Uncomment this if you are using workers.
   // worker: {
   //  plugins: [ nxViteTsPaths() ],
