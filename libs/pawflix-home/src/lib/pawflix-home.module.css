@@ -1,6 +1,13 @@
 .header {
   background-color: white;
   text-align: center;
+  display: flex;
+  flex-direction: col;
+  justify-content: center;
+}
+.header-gif {
+  width: 100px;
+  height: 100px;
 }
 .grid {
   display: grid;

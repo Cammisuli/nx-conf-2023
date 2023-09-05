@@ -10,7 +10,19 @@ export function PawflixHome() {
   }[];
   return (
     <div>
-      <h1 className={styles['header']}>Welcome to PawflixHome!</h1>
+      <div className={styles['header']}>
+        <img
+          src="https://media.tenor.com/jFn8sS1Et-0AAAAM/cat.gif"
+          alt="dancing cat gif"
+          className={styles['header-gif']}
+        ></img>
+        <h1>Welcome to Pawflix</h1>
+        <img
+          src="https://i.pinimg.com/originals/3f/1b/ba/3f1bbacb688be6f52b2c1ffcd8a14c28.gif"
+          alt="dancing dog gif"
+          className={styles['header-gif']}
+        ></img>
+      </div>
       <div className={styles.grid}>
         {data.map((movie, index) => (
           <div
