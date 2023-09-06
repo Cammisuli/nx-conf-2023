@@ -9,10 +9,27 @@ export function PawflixDetails(props: PawflixDetailsProps) {
     id: string;
     title: string;
     image: string;
+    video?: string;
+    description: string;
+    tagline?: string;
   };
   return (
     <div className={styles['container']}>
-      <h1>Details for {data.title}</h1>
+      <div className={styles['header']}>
+        <a href="/"> &#8592; Back</a>
+        <h1>{data.title}</h1>
+        <div></div>
+      </div>
+      <div className={styles['body']}>
+        <video controls>
+          <source src="https://i.imgur.com/IcuAXiw.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className={styles['details']}>
+          <p className={styles['tagline']}>{data.tagline}</p>
+          <p>{data.description}</p>
+        </div>
+      </div>
     </div>
   );
 }
