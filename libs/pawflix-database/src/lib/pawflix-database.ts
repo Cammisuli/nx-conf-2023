@@ -4,8 +4,6 @@ const movies: Movie[] = [
   {
     id: 'dog-yoga',
     title: 'Dog Yoga',
-    image:
-      'https://images.rawpixel.com/image_png_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcHUyMzMxNzg4LWltYWdlLXJtNTAzLTAxXzEtbDBqOXFyYzMucG5n.png',
   },
 ];
 
@@ -13,8 +11,6 @@ const movieDetails: Record<string, MovieDetails> = {
   'dog-yoga': {
     id: 'dog-yoga',
     title: 'Dog Yoga',
-    image:
-      'https://images.rawpixel.com/image_png_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcHUyMzMxNzg4LWltYWdlLXJtNTAzLTAxXzEtbDBqOXFyYzMucG5n.png',
     video: 'https://i.imgur.com/IcuAXiw.mp4',
     tagline:
       "Can true balance be found on a yoga mat, or is it hidden in the chaotic love of man's best friend? 🐾  ",
@@ -26,7 +22,7 @@ const movieDetails: Record<string, MovieDetails> = {
 export function getMovies() {
   return movies;
 }
-
+`c`
 export function getMovieDetails(id: string) {
   return movieDetails[id];
 }

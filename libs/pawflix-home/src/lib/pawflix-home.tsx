@@ -3,6 +3,7 @@ import styles from './pawflix-home.module.css';
 import { Movie } from '@nx-conf-2023/shared-types';
 
 export function PawflixHome() {
+  const serverUrl = 'http://localhost:4200/api';
   const navigate = useNavigate();
   const data = useLoaderData() as Movie[];
   return (
@@ -27,7 +28,11 @@ export function PawflixHome() {
             key={index}
             className={styles.card}
           >
-            <img src={movie.image} alt={movie.title} className={styles.image} />
+            <img
+              src={`${serverUrl}/images/${movie.id}`}
+              alt={movie.title}
+              className={styles.image}
+            />
             <div className={styles.title}>{movie.title}</div>
           </div>
         ))}

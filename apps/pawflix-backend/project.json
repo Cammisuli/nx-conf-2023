@@ -12,10 +12,16 @@
         "platform": "node",
         "outputPath": "dist/apps/pawflix-backend",
         "format": ["cjs"],
-        "bundle": false,
+        "bundle": true,
         "main": "apps/pawflix-backend/src/main.ts",
         "tsConfig": "apps/pawflix-backend/tsconfig.app.json",
-        "assets": ["apps/pawflix-backend/src/assets"],
+        "assets": [
+          {
+            "input": "apps/pawflix-backend/src/assets",
+            "glob": "*.png",
+            "output": "/assets"
+          }
+        ],
         "generatePackageJson": true,
         "esbuildOptions": {
           "sourcemap": true,
