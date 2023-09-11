@@ -9,7 +9,7 @@ const app = express();
 
 app.use(
   '/images',
-  express.static(join(__dirname, 'assets'), {
+  express.static(join(__dirname, 'images'), {
     extensions: ['png'],
     setHeaders: (res) => {
       res.contentType('image/png');

@@ -17,9 +17,14 @@
         "tsConfig": "apps/pawflix-backend/tsconfig.app.json",
         "assets": [
           {
-            "input": "apps/pawflix-backend/src/assets",
-            "glob": "*.png",
-            "output": "/assets"
+            "input": "apps/pawflix-backend/src/assets/images",
+            "glob": "*",
+            "output": "/images"
+          },
+          {
+            "input": "apps/pawflix-backend/src/assets/videos",
+            "glob": "*",
+            "output": "/videos"
           }
         ],
         "generatePackageJson": true,
