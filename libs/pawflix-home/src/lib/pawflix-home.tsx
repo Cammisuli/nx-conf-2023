@@ -1,13 +1,10 @@
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import styles from './pawflix-home.module.css';
+import { Movie } from '@nx-conf-2023/shared-types';
 
 export function PawflixHome() {
   const navigate = useNavigate();
-  const data = useLoaderData() as {
-    id: string;
-    title: string;
-    image: string;
-  }[];
+  const data = useLoaderData() as Movie[];
   return (
     <div>
       <div className={styles['header']}>

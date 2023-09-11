@@ -1,18 +1,12 @@
 import { useLoaderData } from 'react-router-dom';
 import styles from './pawflix-details.module.css';
+import { Movie } from '@nx-conf-2023/shared-types';
 
 /* eslint-disable-next-line */
 export interface PawflixDetailsProps {}
 
 export function PawflixDetails(props: PawflixDetailsProps) {
-  const data = useLoaderData() as {
-    id: string;
-    title: string;
-    image: string;
-    video?: string;
-    description: string;
-    tagline?: string;
-  };
+  const data = useLoaderData() as Movie;
   return (
     <div className={styles['container']}>
       <div className={styles['header']}>

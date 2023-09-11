@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@nx-conf-2023/pawflix-details": ["libs/pawflix-details/src/index.ts"],
-      "@nx-conf-2023/pawflix-home": ["libs/pawflix-home/src/index.ts"]
+      "@nx-conf-2023/pawflix-home": ["libs/pawflix-home/src/index.ts"],
+      "@nx-conf-2023/shared-types": ["libs/shared/types/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
