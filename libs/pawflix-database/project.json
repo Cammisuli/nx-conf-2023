@@ -1,0 +1,19 @@
+{
+  "name": "pawflix-database",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/pawflix-database/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/pawflix-database/**/*.ts",
+          "libs/pawflix-database/package.json"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

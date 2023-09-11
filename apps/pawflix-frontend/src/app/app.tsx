@@ -7,18 +7,18 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import { PawflixDetails } from '@nx-conf-2023/pawflix-details';
-import { Movie } from '@nx-conf-2023/shared-types';
 
-async function loadMovies(): Promise<Movie[]> {
+async function loadMovies() {
   return await fetch('http://localhost:4200/api/movies').then((res) =>
     res.json()
   );
 }
 
-async function loadDetails({
-  params,
-}: LoaderFunctionArgs): Promise<Movie | undefined> {
-  return (await loadMovies()).find((item) => item.id === params.id);
+async function loadDetails({ params }: LoaderFunctionArgs) {
+  const id = params.id;
+  return await fetch(`http://localhost:4200/api/movies/${id}`).then((res) =>
+    res.json()
+  );
 }
 
 const router = createBrowserRouter([
