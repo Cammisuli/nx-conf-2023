@@ -6,12 +6,12 @@ import { Movie } from '@nx-conf-2023/shared-types';
 export interface PawflixDetailsProps {}
 
 export function PawflixDetails(props: PawflixDetailsProps) {
-  const data = useLoaderData() as Movie;
+  const data = useLoaderData() as Movie | undefined;
   return (
     <div className={styles['container']}>
       <div className={styles['header']}>
         <a href="/"> &#8592; Back</a>
-        <h1>{data.title}</h1>
+        <h1>{data?.title}</h1>
         <div></div>
       </div>
       <div className={styles['body']}>
@@ -20,8 +20,8 @@ export function PawflixDetails(props: PawflixDetailsProps) {
           Your browser does not support the video tag.
         </video>
         <div className={styles['details']}>
-          <p className={styles['tagline']}>{data.tagline}</p>
-          <p>{data.description}</p>
+          <p className={styles['tagline']}>{data?.tagline}</p>
+          <p>{data?.description}</p>
         </div>
       </div>
     </div>
