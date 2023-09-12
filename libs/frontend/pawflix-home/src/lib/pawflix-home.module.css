@@ -1,0 +1,84 @@
+.header {
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: col;
+  justify-content: center;
+}
+.header-gif {
+  width: 100px;
+  height: 100px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.card {
+  background-color: #000;
+  border-radius: 8px;
+  border: 3px dashed brown;
+  overflow: hidden;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  animation: wiggle 0.3s ease-in-out;
+}
+
+.title {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: 14px;
+  color: #777;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  75% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

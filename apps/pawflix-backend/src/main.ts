@@ -1,5 +1,8 @@
 import express from 'express';
-import { getMovieDetails, getMovies } from '@nx-conf-2023/pawflix-database';
+import {
+  getMovieDetails,
+  getMovies,
+} from '@nx-conf-2023/backend/pawflix-database';
 import { join } from 'path';
 
 const host = process.env.HOST ?? 'localhost';
@@ -11,9 +14,13 @@ app.use(
   '/images',
   express.static(join(__dirname, 'images'), {
     extensions: ['png'],
-    setHeaders: (res) => {
-      res.contentType('image/png');
-    },
+  })
+);
+
+app.use(
+  '/videos',
+  express.static(join(__dirname, 'videos'), {
+    extensions: ['mp4'],
   })
 );
 

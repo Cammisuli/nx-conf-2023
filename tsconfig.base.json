@@ -15,9 +15,16 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-conf-2023/pawflix-database": ["libs/pawflix-database/src/index.ts"],
-      "@nx-conf-2023/pawflix-details": ["libs/pawflix-details/src/index.ts"],
-      "@nx-conf-2023/pawflix-home": ["libs/pawflix-home/src/index.ts"],
+      "@nx-conf-2023/backend/pawflix-database": [
+        "libs/backend/pawflix-database/src/index.ts"
+      ],
+      "@nx-conf-2023/data-access": ["libs/frontend/data-access/src/index.ts"],
+      "@nx-conf-2023/frontend/pawflix-details": [
+        "libs/frontend/pawflix-details/src/index.ts"
+      ],
+      "@nx-conf-2023/frontend/pawflix-home": [
+        "libs/frontend/pawflix-home/src/index.ts"
+      ],
       "@nx-conf-2023/shared-types": ["libs/shared/types/src/index.ts"]
     }
   },

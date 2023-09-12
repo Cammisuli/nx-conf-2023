@@ -68,6 +68,5 @@
       }
     }
   },
-  "tags": [],
-  "implicitDependencies": ["pawflix-backend"]
+  "tags": []
 }
