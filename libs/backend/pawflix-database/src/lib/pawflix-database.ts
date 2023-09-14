@@ -149,6 +149,6 @@ export function getPawRatingFromDatastore(movieId: string) {
   return pawRatings[movieId] ?? 0;
 }
 
-export function addPawRatingFromDatastore(movieId: string, rating: number) {
+export function addPawRatingToDatastore(movieId: string, rating: number) {
   pawRatings[movieId] = rating;
 }
