@@ -145,10 +145,10 @@ export function getMovieDetails(id: string) {
   return movieDetails[id];
 }
 
-export function getReviews(movieId: string) {
+export function getReviewFromDatastore(movieId: string) {
   return reviews[movieId] ?? 0;
 }
 
-export function addReview(movieId: string, rating: number) {
+export function addReviewToDatastore(movieId: string, rating: number) {
   reviews[movieId] = rating;
 }
