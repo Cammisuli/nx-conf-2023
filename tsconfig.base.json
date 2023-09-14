@@ -11,10 +11,7 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": [
-      "es2020",
-      "dom"
-    ],
+    "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
@@ -25,22 +22,18 @@
       "@nx-conf-2023/backend/pawflix-movies": [
         "libs/backend/pawflix-movies/src/index.ts"
       ],
-      "@nx-conf-2023/data-access": [
-        "libs/frontend/data-access/src/index.ts"
+      "@nx-conf-2023/backend/pawflix-reviews": [
+        "libs/backend/pawflix-reviews/src/index.ts"
       ],
+      "@nx-conf-2023/data-access": ["libs/frontend/data-access/src/index.ts"],
       "@nx-conf-2023/frontend/pawflix-details": [
         "libs/frontend/pawflix-details/src/index.ts"
       ],
       "@nx-conf-2023/frontend/pawflix-home": [
         "libs/frontend/pawflix-home/src/index.ts"
       ],
-      "@nx-conf-2023/shared-types": [
-        "libs/shared/types/src/index.ts"
-      ]
+      "@nx-conf-2023/shared-types": ["libs/shared/types/src/index.ts"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }
