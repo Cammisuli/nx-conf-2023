@@ -33,7 +33,6 @@ export function PawflixHome() {
               alt={movie.title}
               className={styles.image}
             />
-            <div className={styles.title}>{movie.title}</div>
           </div>
         ))}
       </div>
