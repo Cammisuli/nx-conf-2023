@@ -1,5 +1,7 @@
 import { Movie, MovieDetails } from '@nx-conf-2023/shared-types';
 
+const reviews: Record<string, number> = {};
+
 const movies: Movie[] = [
   {
     id: 'dog-yoga',
@@ -134,10 +136,19 @@ const movieDetails: Record<string, MovieDetails> = {
     tagline: `When the cat's away, the lion will play.`,
   },
 };
+
 export function getMovies() {
   return movies;
 }
-`c`;
+
 export function getMovieDetails(id: string) {
   return movieDetails[id];
+}
+
+export function getReviews(movieId: string) {
+  return reviews[movieId] ?? 0;
+}
+
+export function addReview(movieId: string, rating: number) {
+  reviews[movieId] = rating;
 }
