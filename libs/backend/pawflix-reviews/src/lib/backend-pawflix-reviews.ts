@@ -1,26 +1,26 @@
 import { Express } from 'express';
 import {
-  addReviewToDatastore,
-  getReviewFromDatastore,
+  addPawRatingToDatastore,
+  getPawRatingFromDatastore,
 } from '@nx-conf-2023/backend/pawflix-database';
 
-export function addReview(movieId: string, paws: number) {
-  addReviewToDatastore(movieId, paws);
+export function addPawRating(movieId: string, paws: number) {
+  addPawRatingToDatastore(movieId, paws);
 }
 
-export function getReviews(movieId: string) {
-  const paws = getReviewFromDatastore(movieId);
+export function getPawRating(movieId: string) {
+  const paws = getPawRatingFromDatastore(movieId);
   return { paws };
 }
 
 export default function backendPawflixReviews(app: Express) {
-  app.get('/reviews/:id', (req, res) => {
-    const reviews = getReviews(req.params.id);
+  app.get('/rating/:id', (req, res) => {
+    const rating = getPawRating(req.params.id);
 
-    res.send(reviews);
+    res.send(rating);
   });
 
-  app.post('/reviews/:id', (req, res) => {
-    addReview(req.params.id, req.body.paws);
+  app.post('/rating/:id', (req, res) => {
+    addPawRating(req.params.id, req.body.paws);
   });
 }
