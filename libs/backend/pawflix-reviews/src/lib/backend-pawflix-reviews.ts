@@ -21,8 +21,9 @@ export default function backendPawflixReviews(app: Express) {
   });
 
   app.post('/rating/:id', (req, res) => {
-    addPawRating(req.params.id, req.body.paws);
+    const paws = req.body.paws;
+    addPawRating(req.params.id, paws);
 
-    res.sendStatus(200);
+    res.send({ paws });
   });
 }
