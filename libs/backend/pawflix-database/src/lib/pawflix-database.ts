@@ -1,6 +1,6 @@
 import { Movie, MovieDetails } from '@nx-conf-2023/shared-types';
 
-const reviews: Record<string, number> = {};
+const pawRatings: Record<string, number> = {};
 
 const movies: Movie[] = [
   {
@@ -145,10 +145,10 @@ export function getMovieDetails(id: string) {
   return movieDetails[id];
 }
 
-export function getReviewFromDatastore(movieId: string) {
-  return reviews[movieId] ?? 0;
+export function getPawRatingFromDatastore(movieId: string) {
+  return pawRatings[movieId] ?? 0;
 }
 
-export function addReviewToDatastore(movieId: string, rating: number) {
-  reviews[movieId] = rating;
+export function addPawRatingToDatastore(movieId: string, rating: number) {
+  pawRatings[movieId] = rating;
 }
