@@ -9,7 +9,8 @@ export function addReview(movieId: string, paws: number) {
 }
 
 export function getReviews(movieId: string) {
-  return getReviewFromDatastore(movieId);
+  const paws = getReviewFromDatastore(movieId);
+  return { paws };
 }
 
 export default function backendPawflixReviews(app: Express) {
