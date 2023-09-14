@@ -1,1 +1,1 @@
-export * from './lib/backend-pawflix-reviews';
+export { default } from './lib/backend-pawflix-reviews';
