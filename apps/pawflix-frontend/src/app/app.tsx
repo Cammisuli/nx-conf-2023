@@ -3,18 +3,18 @@ import { PawflixHome } from '@nx-conf-2023/frontend/pawflix-home';
 import styles from './app.module.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { PawflixDetails } from '@nx-conf-2023/frontend/pawflix-details';
-import { loadDetails, loadMovies } from '@nx-conf-2023/data-access';
+import { getMovieDetails, getMovies } from '@nx-conf-2023/data-access';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <PawflixHome />,
-    loader: loadMovies,
+    loader: getMovies,
   },
   {
     path: '/details/:id',
     element: <PawflixDetails />,
-    loader: loadDetails,
+    loader: getMovieDetails,
   },
 ]);
 
