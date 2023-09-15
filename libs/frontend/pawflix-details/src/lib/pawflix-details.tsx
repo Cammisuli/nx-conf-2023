@@ -2,6 +2,7 @@ import { MovieDetails } from '@nx-conf-2023/shared-types';
 import { useLoaderData } from 'react-router-dom';
 import styles from './pawflix-details.module.css';
 import { videoUrl } from '@nx-conf-2023/data-access';
+import PawsRating from './paws-rating/paws-rating';
 
 /* eslint-disable-next-line */
 export interface PawflixDetailsProps {}
@@ -23,6 +24,7 @@ export function PawflixDetails(props: PawflixDetailsProps) {
         <div className={styles['details']}>
           <p className={styles['tagline']}>{data?.tagline}</p>
           <p>{data?.description}</p>
+          <PawsRating />
         </div>
       </div>
     </div>
