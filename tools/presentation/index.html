@@ -11,8 +11,26 @@
 
     <link rel="stylesheet" href="dist/reset.css" />
     <link rel="stylesheet" href="dist/reveal.css" />
-    <link rel="stylesheet" href="dist/theme/vscode.css" />
+    <link rel="stylesheet" href="dist/theme/league.css" />
 
+    <style>
+      .profile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        & img {
+          border-radius: 50%;
+          width: 20%;
+          box-shadow: -4px 0px 19px 0px rgb(0 0 0 / 40%);
+        }
+        & p {
+          display: flex;
+          flex-flow: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
     <!-- Theme used for syntax highlighted code -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css" />
   </head>
@@ -22,9 +40,31 @@
         <section>
           <h2>Level Up Your Productivity with</h2>
           <img src="assets/nx-console.svg" />
-          <h3>Jon Cammisuli & Max Kless</h3>
         </section>
-        <section></section>
+        <section>
+          <div class="profile">
+            <img src="assets/jonathan-cammisuli.webp" />
+            <p>
+              <span>Jon Cammisuli</span>
+              <a href="https://github.com/cammisuli">github.com/cammisuli</a>
+            </p>
+          </div>
+
+          <div class="profile">
+            <img src="assets/max-kless.webp" />
+            <p>
+              <span>Max Kless</span>
+              <a href="https://twitter.com/maxkless">twitter.com/maxkless</a>
+            </p>
+        </section>
+
+        <section data-auto-animate>
+          <h3>Nx Console updates</h3>
+        </section>
+        <section data-auto-animate>
+          <h3>Nx Console updates</h3>
+          <p class="fragment">Jetbrains IDE support</p>
+        </section>
       </div>
     </div>
 
