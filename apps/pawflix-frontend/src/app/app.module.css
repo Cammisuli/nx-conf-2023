@@ -3,4 +3,6 @@
   background: url('../assets/background.jpg') repeat;
   background-size: 175px;
   padding: 2rem;
+  box-sizing: border-box;
+  min-height: 100vh;
 }
